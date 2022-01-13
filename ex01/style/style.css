@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+}
+a{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+}
+.box{
+    border: 1px solid red;
+    display: flex;
+    flex: 1;
+}
+.box div{
+    height: 200px;
+    flex: 1;
+}
+.box div:nth-child(1){
+    background-color: yellow;
+}
+.box div:nth-child(2){
+    background-color: yellowgreen;
+}
