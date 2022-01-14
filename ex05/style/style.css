@@ -4,40 +4,27 @@ body{
     font-family: 'Noto Sans KR', sans-serif;
     color: #222;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #ddd;
 }
 a{
     font-family: 'Noto Sans KR', sans-serif;
     color: #222;
     text-decoration: none;
 }
-section{
-    width: 1200px;
-    display: flex;
-}
-section article{
-    border:  solid 1px black;
-    flex: 1;
-}
-.content1{
-    background-color: yellow;
-    padding: 30px;
-}
-.content2{
-    display: flex;
-    flex-direction: column;
-}
-.content2 div{
-    flex: 1;
-    padding: 30px;
-}
-.sub-1{
-    background-color: dodgerblue;
-    color: #fff;
-}
-.sub-2{
-    background-color: pink;
+header{background-color: #fff;display: flex; padding: 20px;}
+header div{}
+.logo{flex: 1;}
+.gnb{ flex: 6; display: flex; justify-content: center;}
+.gnb a{margin: 0 20px;}
+.search{flex: 1;text-align: right;}
+@media (max-width:768px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .gnb a{margin: 0 10px;}
+    .search{text-align: center;}
 }
