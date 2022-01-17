@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.parent{width: 600px;display: flex;flex-wrap: wrap;}
+.child{height: 150px; width: 33.33%;box-sizing: border-box; padding: 15px;display: flex;}
+.child div{background-color: yellowgreen;flex: 1;display: flex;justify-content: center;align-items: center;}
