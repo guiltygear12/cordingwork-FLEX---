@@ -1,0 +1,52 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    margin: 0;
+}
+/* reset */
+a{text-decoration: none; color: #222; font-family: 'Montserrat', sans-serif;}
+h1,h2,h3,h4,h5,h6{cursor: pointer; font-weight: normal;}
+button{cursor: pointer; outline: none;}
+button,input,textarea,select{outline: none; font-family: 'Noto Sans KR', sans-serif;}
+
+/* header */
+section{width: 950px; margin: 0 auto;}
+.section-header{}
+.gnb{padding: 20px 0;text-align: right;}
+.gnb a{margin: 10px;position: relative;}
+.gnb a:hover::before{width: 100%;}
+.gnb a::before{content: '';position: absolute;width: 0%;height: 2px;background-color: crimson;bottom: -5px;right: 50%; transform: translateX(50%);transition: .2s;}
+.gnb a:last-child{margin-right: 0;}
+.search-box{display: flex; justify-content: space-between; padding-top: 20px;}
+.search-box input{border: none;border-bottom: 1px solid #000; font-size: 18px; padding: 5px;background: url(../img/search.png) no-repeat center right; background-size: 20px; width: 300px;box-sizing: border-box;}
+.search-box input::placeholder{opacity: 1; transition: .2s;}
+.search-box input:focus::placeholder{opacity: 0;}
+.search-box button{border:none; background-color: crimson; color: #fff; padding: 12px 60px; border-radius: 10px; box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.5); font-size: 18px; transition: .3s;}
+.search-box button:hover{background-color: #222;}
+
+/* items - gallery */
+.items{display: flex;flex-wrap: wrap;justify-content: space-between; margin-top: 80px;}
+.item{ margin-bottom: 5px;width: 310px; height: 200px; overflow: hidden;}
+.item img{ width: 100%;}
+
+/* media */
+@media (max-width:768px) {
+    section{width: 100%; padding: 20px; box-sizing: border-box;}
+    .gnb{text-align: center;}
+    .gnb a:last-child{margin-right: 10px;}
+    .search-box{flex-direction: column; align-items: center; gap: 20px;}
+    .search-box input{width: 100%;}
+    .search-box button{width: 100%;}
+    .items{margin-top: 40px;}
+    .item{width: 100%;}
+}
+@media (min-width:769px) and (max-width:1280px) {
+    section{width: 100%; padding: 20px; box-sizing: border-box;}
+    .item{width: calc(50% - 2px);height: 250px; margin-bottom: 2px;}
+}
