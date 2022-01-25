@@ -1,0 +1,34 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body{font-family: 'Noto Sans KR', sans-serif;color: #222; margin: 0; font-size: 15px; font-weight: 300;}
+a{text-decoration: none;color: #222;}
+h1,h2,h3,h4,h5,h6{margin: 0;font-weight: normal;}
+button{cursor: pointer; outline: none;}
+input,textarea,select{outline: none;}
+
+section{width: 1000px; margin: 0 auto;display: flex;}
+.post{display: flex;}
+.post:nth-child(odd){flex-direction: column ;}
+.post:nth-child(even){flex-direction: column-reverse;}
+.image{width: 250px; overflow: hidden;}
+.image img{ width: 100%; display: block;transition: .3s;}
+.image img:hover{ transform:scale(1.3);}
+.desc{background-color: orange; color: #fff;text-align: center;height: 250px;display: flex; justify-content: center;flex-direction: column;}
+.desc h2{}
+.desc p{padding: 20px;}
+
+/* tab */
+@media (min-width:768px) and (max-width:1024px){
+    section{width: 100%;padding: 30px;box-sizing: border-box; flex-wrap: wrap;}
+    .post:nth-child(odd){flex-direction: row;}
+    .post:nth-child(even){flex-direction: row-reverse;}
+    .image,
+    .desc{flex: 1; height: 100%;}
+}
+/* phone */
+@media (max-width:767px){
+    section{width: 100%;padding: 30px;box-sizing: border-box; flex-direction: column;}
+    .post:nth-child(even){flex-direction: column;}
+    .image{width: 100%;}
+}

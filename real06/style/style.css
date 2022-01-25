@@ -1,0 +1,45 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* reset */
+body{font-family: 'Noto Sans KR', sans-serif;color: #222;font-weight: 300;margin: 0;}
+a{text-decoration: none;color: #222;}
+h1,h2,h3,h4,h5,h6{margin: 0;font-weight: normal;}
+button{cursor: pointer; outline: none;}
+input,textarea,select{outline: none;}
+
+/* main css */
+section{width: 1200px;margin: auto;}
+.class-header h1{font-size: 32px;}
+.class-header p{margin-bottom: 30px;}
+.class-header h1::after{content: '\f105';font-family: 'fontawesome'; margin-left: 10px;color: #bbb;cursor: pointer;}
+
+/* items */
+.items{display: flex; margin-top: 50px;}
+.item{flex: 1; margin-right: 10px;}
+.item:last-child{margin-right: 0;}
+
+/* item */
+.item img {width: 100%;}
+.item h4{margin-bottom: 5px;}
+.item.event h4{margin-bottom: 20px;color: crimson;}
+.item.event img{border: 1px solid #ccc;}
+.category{font-weight: bold; color: dodgerblue;}
+.item p{margin: 0;}
+.item p .fa{color: gold;}
+.item p em{font-style: normal;font-size: 13px;}
+.price{display: block;font-weight: normal; color: dodgerblue;margin-bottom: 5px;}
+.badge{background-color: pink;font-size: 14px; padding: 2px 8px; border-radius: 5px;}
+.badge.only{background-color: rgb(191, 237, 255);}
+
+/* media */
+@media (max-width:768px){
+    section{width: 100%;padding: 15px; box-sizing: border-box;}
+    .item{margin-right: 0; margin-bottom: 30px;}
+    .items{flex-direction: column;}
+    .item:nth-child(1){order: 2;}
+    .item:nth-child(2){order: 3;}
+    .item:nth-child(3){order: 4;}
+    .item:nth-child(4){order: 1;}
+}
